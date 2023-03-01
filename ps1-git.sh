@@ -1,9 +1,9 @@
 #to be pasted in .bashrc or bash_profile
 
 parse_git_branch() {
-     local BR_XPXPXWZTZU=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
-     if [ -n "$BR_XPXPXWZTZU" ]; then
-        echo -n "$BR_XPXPXWZTZU:"
+     local GIT_CURRENT_BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
+     if [ -n "$GIT_CURRENT_BRANCH" ]; then
+        echo -n "$GIT_CURRENT_BRANCH:"
      fi
 }
 
